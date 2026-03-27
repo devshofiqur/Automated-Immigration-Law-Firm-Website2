@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Consultation — ClarityImmigration</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fas fa-dove"></i></div>
+      <span class="logo-text">NextStep<strong>Immigration Law farm</strong></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services &amp; Pricing</a>
+      <a href="consultation.html" class="nav-link active">Consultation</a>
+    </div>
+    <a href="consultation.html" class="btn-primary nav-cta">Book Consultation</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero consult-hero">
+  <div class="page-hero-bg">
+    <img src="https://i.ibb.co.com/23fS32XK/Gemini-Generated-Image-pw07sdpw07sdpw07.png" alt="Consultation"/>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Consultation Booking</span></div>
+    <div class="hero-badge">Free 15-Minute Call</div>
+    <h1 class="page-hero-title">Book Your<br/><span class="accent">Free Consultation</span></h1>
+    <p>Select a date and time that works for you. We'll be in touch to confirm your slot and send you the meeting details.</p>
+  </div>
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="booking-section">
+  <div class="booking-container">
+
+    <!-- LEFT: What to Expect -->
+    <div class="booking-left fade-up">
+      <div class="expect-card">
+        <div class="expect-badge">FREE CONSULTATION</div>
+        <h3>What to Expect</h3>
+        <p>Our free consultation is your opportunity to get clarity on your immigration options. Speak with a team member who'll listen to your situation and help you find the best path forward.</p>
+
+        <div class="expect-items">
+          <div class="expect-item">
+            <div class="expect-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>15 Minutes</strong>
+              <p>A focused call to understand your case and outline your options.</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="expect-icon"><i class="fas fa-video"></i></div>
+            <div>
+              <strong>Zoom or Phone</strong>
+              <p>Meet remotely from anywhere. We'll send you a link or call you.</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="expect-icon"><i class="fas fa-clipboard-list"></i></div>
+            <div>
+              <strong>No Prep Required</strong>
+              <p>Just come with your questions. We'll guide the conversation.</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="expect-icon"><i class="fas fa-handshake"></i></div>
+            <div>
+              <strong>No Obligation</strong>
+              <p>This is an informational call only. No commitment required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="client-testimonial">
+          <div class="testimonial-quote">
+            <i class="fas fa-quote-left"></i>
+            <p>"The consultation was incredibly helpful. They answered all my questions clearly and I felt confident moving forward right after the call."</p>
+          </div>
+          <div class="testimonial-mini-author">
+            <img src="https://i.pravatar.cc/50?img=33" alt="James L."/>
+            <div>
+              <strong>James L.</strong>
+              <span>Philippines → U.S. Green Card</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="expect-phone">
+          <i class="fas fa-phone-volume"></i>
+          <div>
+            <strong>+1 (800) 555-0190</strong>
+            <span>Mon-Fri, 9am-6pm Eastern Time</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Booking Form -->
+    <div class="booking-right fade-up delay-1">
+      <div class="booking-form-card">
+        <!-- Calendar -->
+        <div class="calendar-section">
+          <div class="calendar-nav">
+            <button class="cal-nav-btn" id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+            <h4 class="calendar-title" id="calendarTitle">March 2026</h4>
+            <button class="cal-nav-btn" id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <div class="calendar-grid">
+            <div class="cal-day-name">Sun</div>
+            <div class="cal-day-name">Mon</div>
+            <div class="cal-day-name">Tue</div>
+            <div class="cal-day-name">Wed</div>
+            <div class="cal-day-name">Thu</div>
+            <div class="cal-day-name">Fri</div>
+            <div class="cal-day-name">Sat</div>
+          </div>
+          <div class="calendar-days" id="calendarDays"></div>
+
+          <!-- Time Slots (shown after date selection) -->
+          <div class="time-slots" id="timeSlots" style="display:none;">
+            <p class="time-slots-label">Available Times — <span id="selectedDateLabel"></span></p>
+            <div class="slots-grid">
+              <button class="time-slot">9:00 AM</button>
+              <button class="time-slot">9:30 AM</button>
+              <button class="time-slot">10:00 AM</button>
+              <button class="time-slot">11:00 AM</button>
+              <button class="time-slot">2:00 PM</button>
+              <button class="time-slot">3:30 PM</button>
+              <button class="time-slot">4:00 PM</button>
+              <button class="time-slot">5:00 PM</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Details Form -->
+        <div class="form-section">
+          <div class="form-section-title">Your Details</div>
+          <div class="form-group">
+            <label>Full Name <span class="required">*</span></label>
+            <input type="text" placeholder="Jane Doe" class="form-input"/>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address <span class="required">*</span></label>
+              <input type="email" placeholder="jane@email.com" class="form-input"/>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+1 (555) 000-0000" class="form-input"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Interest</label>
+            <div class="select-wrap">
+              <select class="form-input form-select">
+                <option value="">Select a service...</option>
+                <option>Family-Based Immigration</option>
+                <option>Employment Visa</option>
+                <option>Green Card Application</option>
+                <option>Citizenship & Naturalization</option>
+                <option>Student Visa</option>
+                <option>Other</option>
+              </select>
+              <i class="fas fa-chevron-down select-arrow"></i>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Brief Description of Your Case</label>
+            <textarea class="form-input form-textarea" placeholder="Tell us a bit about your immigration situation..." maxlength="500" id="caseDescription"></textarea>
+            <div class="char-count"><span id="charCount">0</span>/500</div>
+          </div>
+          <button class="btn-primary full submit-btn" id="submitBtn">
+            <i class="fas fa-calendar-check"></i> Confirm Consultation
+          </button>
+          <p class="form-note"><i class="fas fa-shield-halved"></i> We'll confirm your slot via email within 1 business day</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS MESSAGE (hidden) -->
+<div class="success-overlay" id="successOverlay" style="display:none;">
+  <div class="success-card">
+    <div class="success-icon"><i class="fas fa-circle-check"></i></div>
+    <h3>Consultation Requested!</h3>
+    <p>We've received your consultation request and will confirm your slot via email within 1 business day.</p>
+    <div class="success-details">
+      <div><i class="fas fa-envelope"></i> Check your inbox for confirmation</div>
+      <div><i class="fas fa-phone"></i> We may call to confirm your time</div>
+    </div>
+    <button class="btn-primary" onclick="document.getElementById('successOverlay').style.display='none'">Close</button>
+  </div>
+</div>
+
+<!-- AFTER CONSULTATION STEPS -->
+<section class="after-section">
+  <div class="section-container">
+    <div class="section-label">After Your Consultation</div>
+    <h2 class="section-title">What Happens Next</h2>
+    <div class="after-steps">
+      <div class="after-step fade-up">
+        <div class="after-step-num">01</div>
+        <div class="after-step-icon"><i class="fas fa-layer-group"></i></div>
+        <h4>Select Package</h4>
+        <p>Choose your service level based on our recommendation during the consultation.</p>
+      </div>
+      <div class="after-arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="after-step fade-up delay-1">
+        <div class="after-step-num">02</div>
+        <div class="after-step-icon"><i class="fas fa-file-lines"></i></div>
+        <h4>Complete Intake</h4>
+        <p>Fill out our secure questionnaire to provide the details we need to start your case.</p>
+      </div>
+      <div class="after-arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="after-step fade-up delay-2">
+        <div class="after-step-num">03</div>
+        <div class="after-step-icon"><i class="fas fa-upload"></i></div>
+        <h4>Submit Documents</h4>
+        <p>Upload all required documents through the secure client portal. Zero paperwork hassle.</p>
+      </div>
+      <div class="after-arrow"><i class="fas fa-arrow-right"></i></div>
+      <div class="after-step fade-up delay-3">
+        <div class="after-step-num">04</div>
+        <div class="after-step-icon"><i class="fas fa-gavel"></i></div>
+        <h4>Case Filed</h4>
+        <p>We prepare and file your case. You get confirmation and real-time status updates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-section mini">
+  <div class="cta-bg">
+    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600&q=80" alt="City"/>
+    <div class="cta-overlay"></div>
+  </div>
+  <div class="cta-content">
+    <div class="section-label light">Ready to Begin?</div>
+    <h2 class="cta-title">Start Your Immigration Journey</h2>
+    <p>Schedule a free 15-minute consultation today. No obligations, just clarity.</p>
+    <a href="#booking" class="btn-primary large">Book Free Consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-icon"><i class="fas fa-dove"></i></div>
+        <span class="logo-text">NextStep<strong>Immigration Law farm</strong></span>
+      </div>
+      <p>Transparent, flat-fee immigration legal services. We guide you every step of the way — from consultation to successful filing.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services &amp; Pricing</a>
+      <a href="consultation.html">Consultation Booking</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <div class="contact-item"><i class="fas fa-phone"></i><div><strong>+1 (800) 555-0190</strong><span>Mon-Fri, 9am-6pm EST</span></div></div>
+      <div class="contact-item"><i class="fas fa-envelope"></i><div><strong>info@clarityimmigration.com</strong><span>We respond within 4 hours</span></div></div>
+      <div class="contact-item"><i class="fas fa-location-dot"></i><div><strong>123 Legal Plaza, Suite 500</strong><span>New York, NY 10001</span></div></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Dev-Shofiqr | All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+<script src="main.js"></script>
+</body>
+</html>
